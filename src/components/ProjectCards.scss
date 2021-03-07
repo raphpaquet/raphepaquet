@@ -1,0 +1,78 @@
+@import '../assets/variables';
+
+#project
+
+.MuiCard-root {
+    max-width: 345px;
+    margin-bottom: 2em,
+}
+
+.media {
+  height: 0;
+  padding-top: 56.25%;
+}
+
+.card-header span{
+  font-family: $font-text !important;
+  font-weight: bold;
+}
+
+.card-content {
+  line-height: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-stack {
+  height: 200px;
+}
+.typo-title {
+  font-family: $font-text;
+  font-weight: bold;
+}
+
+.typo-type {
+  font-size: 14px;
+}
+
+.typo-text {
+  font-family: $font-text;
+}
+
+.MuiCardContent-root p {
+  height: 60px;
+}
+
+@media (max-width: 480px) {
+  #project {
+    .MuiCard-root {
+        max-width: 800px;
+        min-width: 800px;
+    }
+    .card-header{
+      .MuiCardHeader-content span{
+        font-size: 2.5em;
+      }
+    }
+    .MuiCardContent-root p {
+      font-size: 1.7em;
+    }
+    .MuiCardActions-root {
+      padding:15px;
+    }
+    .MuiIconButton-label {
+      transform: scale(2.5);
+    }
+    .MuiIconButton-root {
+      transform: scale(0.8);
+    }
+    .card-content {
+      .card-stack {
+        font-size: 1.7em;
+      }
+      .card-work {
+        font-size: 1.7em;
+      }
+    }
+  }
+}

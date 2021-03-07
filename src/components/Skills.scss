@@ -1,0 +1,59 @@
+@import '../assets/variables';
+
+#skills {
+
+  padding: 2em;
+  .title-button-skills {
+    float: right;
+  }
+  h1 {
+    font-family: $font-text;
+    color: black;
+    font-weight: 100;
+    font-size: 2em;
+    margin-top: 1em;
+  }
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  .skill-name {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-text;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+  .skill-icon {
+    margin: 2em;
+    padding: 1em;
+    transform: scale(3.5);
+  }
+}
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .click-prg {
+    font-family: $font-text;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  #skills {
+    h1 {
+      font-size: 3em;
+    }
+    label {
+      font-size: 1.1em;
+    }
+    .click-prg {
+      font-size: 1.5em;
+    }
+  }
+}
