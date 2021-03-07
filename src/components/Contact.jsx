@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   buttonProgress: {
-    color: '#006466',
+    color: '#dac29b',
     position: 'flex',
     justifyContent: 'center',
     alignItem:'center',
@@ -106,7 +106,7 @@ export default function Contact(props) {
       <div className="title-button">
         <FloatingActionButtons />
       </div>
-        <h1>{content.title}</h1>
+        <h1 className="title">{content.title}</h1>
       <form className="contact-form" onSubmit={handleSubmit}>
         <input id="name" className="form-input" type="text" name="name" placeholder={content.name} value={state.name} onChange={handleChange} required/>
         <br></br>
@@ -121,7 +121,7 @@ export default function Contact(props) {
             <span>{content.click}</span>
          </button>
          <div className="progress">
-          {loading && <CircularProgress color="secondary" size={40} className={classes.buttonProgress} /> }
+          {loading && <CircularProgress color="#dac29b" size={40} className={classes.buttonProgress} /> }
          </div>
         </div>
       </form>

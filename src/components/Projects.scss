@@ -1,18 +1,24 @@
 @import '../assets/variables';
+@import '../breakpoints/breakpoints.scss';
 
 #project {
   color: black;
   margin: 4em 1em;
   padding: 2em;
+  height: fit-content;
   .title-button-project {
     float: right;
   }
-  h1 {
+  .title {
     font-family: $font-text;
     color: black;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 2em;
     margin-top: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 4rem;
   }
   .title-project {
     font-family: $font-text;
@@ -24,6 +30,7 @@
     flex-flow: wrap;
     justify-content: space-evenly;
     margin: 2em;
+    
   }
 }
 

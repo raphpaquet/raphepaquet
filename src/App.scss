@@ -1,22 +1,47 @@
 @import './assets/variables';
+@import "./breakpoints/breakpoints.scss";
 
 .App {
-  text-align: center;
+  background-color: #dac29b;
+  height: 100vh;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  @include media('<=other') {
+    // background-color: blue;
+  }
+  @include media('<=tablet') {
+    // background: orange;
+  }
+  @include media('<=phone') {
+    // background: green;
+    overflow: hidden;
+    height: 100vh;
+  }
   main {
     font-family: $font-title;
+
     .landing {
-      background: #dac29b;
       color: white;
       min-height: 100vh;
       background-size: cover;
       background-position: center;
-      padding: 0rem 2rem;
       nav {
+        padding: 0rem 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         min-height: 10vh;
         padding: 0rem 3rem;
+        @include media('<=tablet') {
+          padding: 0rem;
+          visibility: hidden;
+          position: fixed;
+        }
+        @include media('<=phone') {
+          visibility: hidden;
+          position: fixed;
+        }
         .nav-links {
           display: flex;
           list-style: none;
@@ -35,10 +60,33 @@
           font-size: 2rem;
         }
       }
+      #nav-small-screen {
+        width: 100%;
+        visibility: hidden;
+        position: fixed;
+        @include media('<=phone') {
+          visibility: visible;
+          position: unset;
+        }
+        @include media('<=tablet') {
+          visibility: visible;
+          position: unset;
+        }
+      }
     }
+
+
     .presentation {
       display: flex;
       justify-content: space-evenly;
+      padding: 0 10%;
+      @include media('<=tablet') {
+        flex-direction: column;
+      }
+      @include media('<=phone') {
+        flex-direction: column;
+        height: 100vh;
+      }
       .image-icon {
         display: flex;
         flex-direction: column;
@@ -49,26 +97,46 @@
           transition:visibility 0.9s linear,opacity 0.9s linear;
         }
         .selfie {
-          margin-top: 3rem;
-          height: 100vh;
+          margin-top: 7rem;
+          height: 80vh;
+          margin-left: 6rem;
           filter: grayscale(1);
           width: auto;
           &:hover {
             filter: drop-shadow(2px 4px 6px black);
+          }
+          @include media('<=tablet') {
+            margin-top: 5rem;
+            width: 30rem;
+            height: auto;
+            margin-left: 2rem;
+          }
+          @include media('<=phone') {
+            width: 15rem;
           }
         }
         .icon-interest {
           position: absolute;
           visibility: hidden;
           opacity: 0;
+          margin-left: 2rem;
+          margin-top: 4rem;
+          @include media('<=phone') {
+            margin-top: 0;
+          }
           .invisible {
             filter: opacity(0.8);
             position: absolute;
             width: 5rem;
-            
+            @include media('<=phone') {
+              width: 2rem;
+            }
           }
           .icon-one {
             margin-top: 15rem;
+            @include media('<=phone') {
+              margin-top: 13rem;
+            }
           }
           .icon-2 {
             margin-top: 7rem;
@@ -76,24 +144,50 @@
           .icon-3 {
             margin-left: 7rem;
             animation: spinning 4s 0.5s  infinite;
+            @include media('<=phone') {
+              margin-top: 3rem;
+              margin-left: 4rem;
+            }
           }
           .icon-4 {
             margin-left: 18rem;
+            @include media('<=phone') {
+              margin-left: 10rem;
+              margin-top: 3rem;
+            }
           }
           .icon-5 {
             margin-left: 25rem;
             margin-top: 7rem;
+            @include media('<=phone') {
+              margin-left: 13rem;
+            }
           }
           .icon-6 {
-            margin-left: 25rem;
+            margin-left: 26rem;
             margin-top: 15rem;
+            @include media('<=phone') {
+              margin-left: 13rem;
+              margin-top: 13rem;
+            }
           }
         }
       }
         .presentation-text {
           display: flex;
           flex-direction: column;
+          @include media('<=tablet') {
+            margin-top: 4rem;
+            width: 100%;
+            align-self: center;
+            align-items: center;
+          }
+          @include media('<=phone') {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
           .big-text {
+            text-align: center;
             font-size: 2rem;
             font-family: $font-text;
             letter-spacing: 0.2em;
@@ -102,6 +196,13 @@
             margin-top: 10rem;
             color: white;
             width: fit-content;
+            @include media('<=tablet') {
+              margin-top: 0rem;
+            }
+            @include media('<=phone') {
+              font-size: 1rem;
+              margin-top: 2rem;
+            }
           }
           
           .button {
@@ -126,7 +227,11 @@
             border-radius: 0;
             box-shadow: inset 0 0 0 var(--border-size) currentcolor;
             transition: background .8s ease;
-            
+            @include media('<=phone') {
+              padding: 1em 1em;
+              font-size: 0.5rem;
+              margin-top: 2rem;
+            }
             &:hover {
               background: rgba(241, 241, 241, 0.03);
             }
@@ -225,6 +330,10 @@
   }
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 @keyframes colorChange {
   from { filter: opacity(0);}
   to {filter: none}
@@ -247,3 +356,5 @@
     bottom: 0;
   }
 }
+
+

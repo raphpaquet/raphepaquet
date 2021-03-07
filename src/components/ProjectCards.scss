@@ -1,15 +1,19 @@
 @import '../assets/variables';
+@import '../breakpoints/breakpoints.scss';
 
 #project
 
 .MuiCard-root {
     max-width: 345px;
-    margin-bottom: 2em,
+    margin-bottom: 2em;
 }
 
 .media {
   height: 0;
   padding-top: 56.25%;
+  @include media('<=phone') {
+    max-width: 100vw;
+  }
 }
 
 .card-header span{
@@ -18,7 +22,6 @@
 }
 
 .card-content {
-  line-height: 40px;
   display: flex;
   flex-direction: column;
 }
@@ -29,50 +32,92 @@
 .typo-title {
   font-family: $font-text;
   font-weight: bold;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  @include media('<=phone') {
+  }
 }
 
 .typo-type {
   font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  @include media('<=phone') {
+    font-size: 0.6rem;
+  }
 }
 
 .typo-text {
   font-family: $font-text;
+  color: #929090;
+  font-weight: 300;
+  @include media('<=phone') {
+  }
 }
 
-.MuiCardContent-root p {
-  height: 60px;
+.MuiCardContent-root {
+  margin-bottom: 1rem;
+  p {
+    height: 60px;
+    font-family: 'Inter';
+    font-weight: 300;
+    font-size: 1.7em;
+    @include media('<=phone') {
+      font-size: 0.8rem;
+    }
+  }
 }
 
-@media (max-width: 480px) {
-  #project {
-    .MuiCard-root {
-        max-width: 800px;
-        min-width: 800px;
+
+
+.card-header{
+  .MuiCardHeader-content span{
+    font-size: 1.5em;
+    font-weight: 300;
+    @include media('<=phone') {
+      font-size: 1rem;
     }
-    .card-header{
-      .MuiCardHeader-content span{
-        font-size: 2.5em;
-      }
+  }
+}
+
+.MuiCardActions-root {
+  padding:15px;
+  color: black;
+  @include media('<=phone') {
+
+  }
+}
+.MuiIconButton-label {
+  transform: scale(1.5);
+  a {
+    color: black;
+  }
+  @include media('<=phone') {
+    transform: scale(1);
+  }
+}
+.MuiIconButton-root {
+  transform: scale(0.8);
+}
+.card-content {
+  font-family: $font-text;
+  @include media('<=phone') {
+    line-height: normal;
+  }
+  .card-stack {
+    font-size: 1.7em;
+    @include media('<=phone') {
+      font-size: 0.7rem;
+      height: fit-content;
+      margin-bottom: 1rem;
     }
-    .MuiCardContent-root p {
-      font-size: 1.7em;
-    }
-    .MuiCardActions-root {
-      padding:15px;
-    }
-    .MuiIconButton-label {
-      transform: scale(2.5);
-    }
-    .MuiIconButton-root {
-      transform: scale(0.8);
-    }
-    .card-content {
-      .card-stack {
-        font-size: 1.7em;
-      }
-      .card-work {
-        font-size: 1.7em;
-      }
+  }
+  .card-work {
+    font-size: 1.7em;
+    @include media('<=phone') {
+      font-size: 0.7rem;
     }
   }
 }

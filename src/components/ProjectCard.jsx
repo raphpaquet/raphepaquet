@@ -46,7 +46,7 @@ export default function ProjectCard(props) {
 
   const handleExpandClick = i => {
     setExpandedId(expandedId === i ? -1 : i);
-    window.scrollTo(0,1100)
+    // window.scrollTo(0,1100)
   };
 
   const handleClose = i => {
@@ -224,9 +224,9 @@ export default function ProjectCard(props) {
           <div className="card-content">
             <div className="card-stack">
               <div className="typo-title" paragraph>Tech Stack</div>
-              <span className="typo-type" paragraph>Front-End: </span><span className="typo-text" paragraph>
+              <span className="typo-type" paragraph>Front-End: </span><br></br><span className="typo-text" paragraph>
                 {project.techStack_f}</span><br></br>
-                <span className="typo-type" paragraph>Back-End: </span><span className="typo-text" paragraph>
+                <span className="typo-type" paragraph>Back-End: </span><br></br><span className="typo-text" paragraph>
                 {project.techStack_b}</span>
             </div>
             <div className="card-work">

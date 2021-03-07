@@ -5,7 +5,7 @@ export default function ProgressBar(props) {
   const { bgcolor, completed } = props;
   const containerStyles = {
     height: 20,
-    width: '70%',
+    width: '80%',
     backgroundColor: "#dac29b;",
     borderRadius: 50,
     margin: '3em 0em 0em',
@@ -18,13 +18,14 @@ export default function ProgressBar(props) {
     borderRadius: 'inherit',
     textAlign: 'right',
     transition: 'width 1s ease-in-out',
-    fontFamily: "Montserrat"
+    fontFamily: "'Inter', sans-serif"
   }
 
   const labelStyles = {
     padding: 5,
     color: 'white',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontSize: '1rem'
   }
 
   return (

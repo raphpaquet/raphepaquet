@@ -6,7 +6,9 @@ import { Router, Route, Switch } from 'react-router'
 import { createBrowserHistory } from 'history';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-
+import BurgerBtn from './components/Burger-btn';
+import { HashLink } from 'react-router-hash-link';
+import Contact from './components/Contact';
 
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
@@ -16,8 +18,10 @@ document.addEventListener("DOMContentLoaded", function(event){
   tl.to('.slider', { y:"-100%", duration: 1.5, delay: 0.5 });
   tl.to('.intro', { y: "-100%", duration: 1 }, "-=1");
   tl.fromTo('nav', { opacity:0 }, { opacity:1 , duration: 1 });
+  tl.fromTo('#nav-small-screen', { opacity:0 }, { opacity:1 , duration: 1 });
   tl.fromTo('.big-text', { opacity:0 }, { opacity:1 , duration: 1 }, "-=1" );
   tl.fromTo('.button', { opacity:0 }, { opacity:1 , duration: 1 }, "-=1" );
+  tl.fromTo('.selfie', { opacity:0 }, { opacity:1 , duration: 1 }, "-=0.5" );
 })
 
 const history = createBrowserHistory();
@@ -26,6 +30,8 @@ function App() {
 
   const [about, setAbout] = useState(false)
   const [contraste, setContraste] = useState(false);
+
+
 
   const handleClick = () => {
     setContraste(true)
@@ -65,7 +71,19 @@ function App() {
                 <TabsMenu />
               </ul>
             </nav>
+            <div id="nav-small-screen">
+              <BurgerBtn />
+            </div>
             <div className="presentation">
+              <div className="presentation-text">
+                <h2 className="big-text">Junior Web Developer</h2>
+                <HashLink smooth to="#project">
+                  <button class="button" onClick={() => handleClick()}>Projects I worked on
+                  <div class="button__horizontal"></div>
+                  <div class="button__vertical"></div>
+                </button>
+                </HashLink>
+              </div>
               <div className="image-icon">
                 <div className="icon-interest">
                   <img src="./images/camping.png" className="invisible icon-one" />
@@ -76,13 +94,6 @@ function App() {
                   <img src="./images/food.png" className="invisible icon-6" />
                 </div>
                 <img className="selfie" src="./images/selfie1.png" />
-              </div>
-              <div className="presentation-text">
-                <h2 className="big-text">Junior Web Developer</h2>
-                <button class="button" onClick={() => handleClick()}>Projects I worked on
-                  <div class="button__horizontal"></div>
-                  <div class="button__vertical"></div>
-                </button>
               </div>
             </div>
           </section>
@@ -104,6 +115,7 @@ function App() {
       </div>
       <Projects />
       <Skills />
+      <Contact />
       </Route>
       </Switch>
     </Router>

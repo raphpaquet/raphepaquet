@@ -6,8 +6,8 @@ import { SiRails } from 'react-icons/si';
 import { DiRuby } from 'react-icons/di';
 import { AiOutlineConsoleSql } from "react-icons/ai";
 import { TiHtml5 } from "react-icons/ti";
-// import FloatingActionButtons from './FloatingButton';
 import ProgressBar from './ProgressBar';
+import FloatingActionButtons from './FloatingButton';
 
 
 export default function Skills(props) {
@@ -28,11 +28,11 @@ export default function Skills(props) {
   props.language === "french" ? (content = content.french) : (content = content.english);
 
   return (
-    <section id="skills">
+    <div id="skills">
       <div className="title-button-skills">
-        {/* <FloatingActionButtons /> */}
+        <FloatingActionButtons />
       </div>
-      <h1>{content.title}</h1>
+      <h1 className="title">{content.title}</h1>
         <div className="skill">
           <div className="skill-name" onClick={() => setProgress(99)} >
             <IoLogoCss3 className="skill-icon" />
@@ -52,7 +52,7 @@ export default function Skills(props) {
           </div>
           <div className="skill-name" onClick={() => setProgress(85)} >
             <IoLogoNodejs className="skill-icon" />
-            <label>Node.JS</label>
+            <label>Node</label>
           </div>
           <div className="skill-name" onClick={() => setProgress(83)}>
             <FaGit className="skill-icon"  />
@@ -68,13 +68,13 @@ export default function Skills(props) {
           </div>
         <div className="skill-name" onClick={() => setProgress(55)}>
             <SiRails className="skill-icon" />
-            <label>Ruby on Rails</label>
+            <label>Rails</label>
           </div>
         </div>
         <div className="progress">
           <ProgressBar  bgcolor={bg} completed={progress} />
           <p className="click-prg">{content.click}</p>
         </div>
-    </section>
+    </div>
   )
 }
