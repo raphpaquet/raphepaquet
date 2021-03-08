@@ -16,6 +16,7 @@ DEPENDENCES
 }
 
 .r-list{
+  align-items: center;
   padding-left: var(--rListPaddingLeft, 0) ;
   margin-top: var(--rListMarginTop, 0) ;
   margin-bottom: var(--rListMarginBottom, 0) ;
@@ -103,6 +104,11 @@ TEXT UNDERLINED
 .text-underlined:hover::after{
   width: 100%;
   transition-duration: .2s;
+}
+
+.language {
+  display: flex;
+  align-items: center;
 }
 
 

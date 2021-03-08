@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import BurgerBtn from './components/Burger-btn';
 import { HashLink } from 'react-router-hash-link';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
@@ -28,22 +29,30 @@ const history = createBrowserHistory();
 
 function App() {
 
-  const [about, setAbout] = useState(false)
-  const [contraste, setContraste] = useState(false);
+  // /* SET LANGUAGE */
+  let languageStoredInLocalStorage = localStorage.getItem("language");
+  let [language, setLanguage] = useState(
+    languageStoredInLocalStorage ? languageStoredInLocalStorage : "English"
+  );
 
+  // console.log(language)
 
+  function storeLanguageInLocalStorage(language) {
+    localStorage.setItem("language", language);
+  }
+
+  // <select 
+  // className="custom-select"
+  // value={props.language}
+  // onChange={e => props.handleSetLanguage(e.target.value)}>
+  //   <option value="english">English</option>
+  //   <option value="french">Français</option>
+  // </select>
 
   const handleClick = () => {
-    setContraste(true)
+    // setContraste(true)
   }
 
-  const handleClickClose = () => {
-    setAbout(false)
-  }
-
-  const handleHover = () => {
-    setContraste(true);
-  }
 
   let content = {
     english: {
@@ -68,7 +77,13 @@ function App() {
             <nav>
               <h1 id="logo">raphpaquet</h1>
               <ul className="nav-links">
-                <TabsMenu />
+                <TabsMenu 
+                language={language}
+                handleSetLanguage={language => {
+                  setLanguage(language);
+                  storeLanguageInLocalStorage(language)
+                }}
+                  />
               </ul>
             </nav>
             <div id="nav-small-screen">
@@ -113,9 +128,10 @@ function App() {
         </div>
         <div className="slider"></div>
       </div>
-      <Projects />
-      <Skills />
-      <Contact />
+      <Projects language={language}/>
+      <Skills language={language}/>
+      <Contact language={language}/>
+      <Footer />
       </Route>
       </Switch>
     </Router>
