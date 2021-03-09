@@ -1,0 +1,36 @@
+@import '../assets/variables';
+
+.about {
+  // position: absolute;
+  
+  
+  span {
+    font-family: $font-text;
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: lowercase;
+    .a-link {
+      text-decoration: underline;
+      color:white;
+      // padding: 0.1rem;
+      text-transform: capitalize;
+      &:hover {
+        color: $secondary-color;
+        background: white;
+
+      }
+    }
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .bolder {
+    font-weight: 400;
+  }
+  .justify {
+    text-align: justify;
+  }
+}
+
+
+

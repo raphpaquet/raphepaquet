@@ -88,9 +88,6 @@
         height: 100vh;
       }
       .image-icon {
-        display: flex;
-        flex-direction: column;
-        position: relative;
         &:hover .icon-interest {
           visibility: visible;
           opacity:0.9;
@@ -99,7 +96,7 @@
         .selfie {
           margin-top: 7rem;
           height: 80vh;
-          margin-left: 6rem;
+          margin-left: 4rem;
           filter: grayscale(1);
           width: auto;
           &:hover {
@@ -174,6 +171,7 @@
         }
       }
         .presentation-text {
+          align-items: center;
           display: flex;
           flex-direction: column;
           @include media('<=tablet') {
@@ -187,6 +185,7 @@
             margin-bottom: 1rem;
           }
           .big-text {
+            // position: relative;
             text-align: center;
             font-size: 2rem;
             font-family: $font-text;
@@ -204,93 +203,10 @@
               margin-top: 2rem;
             }
           }
-          
-          .button {
-      
-            --offset: 10px;
-            --border-size: 2px;
-            
-            display: inline !important;
-            position: relative;
-            padding: 1em 2.5em;
-            margin-top: 1.5em;
-            appearance: none;
-            border: 0;
-            background: transparent;
-            font-family: $font-text;
-            font-weight: 300;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: .25em;
-            outline: none;
-            cursor: pointer;
-            border-radius: 0;
-            box-shadow: inset 0 0 0 var(--border-size) currentcolor;
-            transition: background .8s ease;
-            @include media('<=phone') {
-              padding: 1em 1em;
-              font-size: 0.5rem;
-              margin-top: 2rem;
-            }
-            &:hover {
-              background: rgba(241, 241, 241, 0.03);
-            }
-            
-            &__horizontal,
-            &__vertical {
-              position: absolute;
-              top: var(--horizontal-offset, 0);
-              right: var(--vertical-offset, 0);
-              bottom: var(--horizontal-offset, 0);
-              left: var(--vertical-offset, 0);
-              transition: transform .8s ease;
-              will-change: transform;
-              
-              &::before {
-                content: '';
-                position: absolute;
-                border: inherit;
-              }
-            }
-            
-            &__horizontal {
-              --vertical-offset: calc(var(--offset) * -1);
-              border-top: var(--border-size) solid currentcolor;
-              border-bottom: var(--border-size) solid currentcolor;
-              
-              &::before {
-                top: calc(var(--vertical-offset) - var(--border-size));
-                bottom: calc(var(--vertical-offset) - var(--border-size));
-                left: calc(var(--vertical-offset) * -1);
-                right: calc(var(--vertical-offset) * -1);
-              }
-            }
-            
-            &:hover &__horizontal {
-              transform: scaleX(0);
-            }
-            
-            &__vertical {
-              --horizontal-offset: calc(var(--offset) * -1);
-              border-left: var(--border-size) solid currentcolor;
-              border-right: var(--border-size) solid currentcolor;
-              
-              &::before {
-                top: calc(var(--horizontal-offset) * -1);
-                bottom: calc(var(--horizontal-offset) * -1);
-                left: calc(var(--horizontal-offset) - var(--border-size));
-                right: calc(var(--horizontal-offset) - var(--border-size));
-              }
-            }
-            
-            &:hover &__vertical {
-              transform: scaleY(0);
-            }
-          }
         }
-      
     }
   }
+  
   
   
   .intro {
@@ -332,7 +248,9 @@
 
 .hidden {
   visibility: hidden;
+  position: absolute;
 }
+
 
 @keyframes colorChange {
   from { filter: opacity(0);}

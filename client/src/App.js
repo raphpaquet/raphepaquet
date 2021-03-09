@@ -10,6 +10,8 @@ import BurgerBtn from './components/Burger-btn';
 import { HashLink } from 'react-router-hash-link';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Button from './components/Button';
+import About from './components/About';
 
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
@@ -29,6 +31,7 @@ const history = createBrowserHistory();
 
 function App() {
 
+  const [about, setAbout] = useState(false)
   // /* SET LANGUAGE */
   let languageStoredInLocalStorage = localStorage.getItem("language");
   let [language, setLanguage] = useState(
@@ -49,9 +52,15 @@ function App() {
   //   <option value="french">Français</option>
   // </select>
 
-  const handleClick = () => {
-    // setContraste(true)
-  }
+  // const handleClick = () => {
+  //   openAbout;
+  // }
+
+  const openAbout = () => {
+    document.querySelector('.about-text').classList.remove('hidden');
+    document.querySelector('.icon-interest').style.visibility = "visible";
+    document.querySelector('.presentation-text').classList.add('hidden');
+  };
 
 
   let content = {
@@ -92,12 +101,12 @@ function App() {
             <div className="presentation">
               <div className="presentation-text">
                 <h2 className="big-text">Junior Web Developer</h2>
-                <HashLink smooth to="#project">
-                  <button class="button" onClick={() => handleClick()}>Projects I worked on
-                  <div class="button__horizontal"></div>
-                  <div class="button__vertical"></div>
+                <button onClick={openAbout}>
+                <Button />
                 </button>
-                </HashLink>
+              </div>
+              <div className="about-text hidden">
+                <About />
               </div>
               <div className="image-icon">
                 <div className="icon-interest">
