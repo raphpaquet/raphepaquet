@@ -58,7 +58,7 @@ function App() {
 
   const openAbout = () => {
     document.querySelector('.about-text').classList.remove('hidden');
-    document.querySelector('.icon-interest').style.visibility = "visible";
+    // document.querySelector('.icon-interest').style.visibility = "visible";
     document.querySelector('.presentation-text').classList.add('hidden');
   };
 
@@ -109,14 +109,14 @@ function App() {
                 <About />
               </div>
               <div className="image-icon">
-                <div className="icon-interest">
+                {/* <div className="icon-interest">
                   <img src="./images/camping.png" className="invisible icon-one" />
                   <img src="./images/coffee.png" className="invisible icon-2"/>
                   <img src="./images/icon-travel-6.jpg" className="invisible icon-3" />
                   <img src="./images/mountains.png" className="invisible icon-4" />
                   <img src="./images/computer-girl.png" className="invisible icon-5" />
                   <img src="./images/food.png" className="invisible icon-6" />
-                </div>
+                </div> */}
                 <img className="selfie" src="./images/selfie1.png" />
               </div>
             </div>

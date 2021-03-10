@@ -7,11 +7,11 @@
   font-size: 62.5%;
   overflow-x: hidden;
   overflow-y: scroll;
-  @include media('<=other') {
-    // background-color: blue;
-  }
   @include media('<=tablet') {
     // background: orange;
+  }
+  @include media('<=desktop') {
+    width: 110%;
   }
   @include media('<=phone') {
     // background: green;
@@ -33,6 +33,11 @@
         justify-content: space-between;
         min-height: 10vh;
         padding: 0rem 3rem;
+        @include media('<=desktop') {
+          margin-right: 0;
+          visibility: hidden;
+          position: fixed;
+        }
         @include media('<=tablet') {
           padding: 0rem;
           visibility: hidden;
@@ -72,6 +77,10 @@
           visibility: visible;
           position: unset;
         }
+        @include media('<=desktop') {
+          visibility: visible;
+          position: unset;
+        }
       }
     }
 
@@ -94,19 +103,27 @@
           transition:visibility 0.9s linear,opacity 0.9s linear;
         }
         .selfie {
-          margin-top: 7rem;
-          height: 80vh;
-          margin-left: 4rem;
+          margin-top: 22rem;
+          height: 55vh;
           filter: grayscale(1);
           width: auto;
           &:hover {
             filter: drop-shadow(2px 4px 6px black);
           }
+          @include media('<=LGdesktop') {
+            margin-top: 25rem;
+            height: 60vh;
+          }
+          @include media('<=desktop') {
+            margin-top: 25rem;
+            margin-left: 15rem;
+            height: 60vh;
+          }
           @include media('<=tablet') {
-            margin-top: 5rem;
             width: 30rem;
             height: auto;
-            margin-left: 2rem;
+            margin-top: 20rem;
+            margin-left: 10rem;
           }
           @include media('<=phone') {
             width: 15rem;

@@ -69,6 +69,12 @@
     font-size: 1.5em;
     letter-spacing: 0.5px;
     font-weight: 300;
+    background-color: #d8d8d8;
+    padding: 1rem;
+    color: #5d5d5d;
+    box-shadow: 1px 4px 3px 2px gainsboro;
+    border-radius: 2rem;
+    margin-top: 5rem;
     @include media('<=phone') {
       text-align: center;
     }

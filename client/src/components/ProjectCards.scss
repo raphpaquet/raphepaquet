@@ -92,7 +92,7 @@
 .MuiIconButton-label {
   transform: scale(1.5);
   a {
-    color: black;
+    color: #4e4e4e;
   }
   @include media('<=phone') {
     transform: scale(1);

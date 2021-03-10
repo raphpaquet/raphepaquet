@@ -1,26 +1,28 @@
 @import '../assets/variables';
-
 .about {
-  // position: absolute;
+  // position: relative;
+  font-family: $font-text;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
   
-  
-  span {
-    font-family: $font-text;
-    font-size: 2rem;
-    font-weight: 200;
-    text-transform: lowercase;
-    .a-link {
-      text-decoration: underline;
-      color:white;
-      // padding: 0.1rem;
-      text-transform: capitalize;
-      &:hover {
-        color: $secondary-color;
-        background: white;
+  // span {
+  //   font-family: $font-text;
+  //   font-size: 2rem;
+  //   font-weight: 200;
+  //   text-transform: lowercase;
+  //   .a-link {
+  //     text-decoration: underline;
+  //     color:white;
+  //     // padding: 0.1rem;
+  //     text-transform: capitalize;
+  //     &:hover {
+  //       color: $secondary-color;
+  //       background: white;
 
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
   .uppercase {
     text-transform: uppercase;
   }
@@ -33,4 +35,143 @@
 }
 
 
+.wrapper {
+  
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+  translateY(20px) scale(1.5);
+  overflow: hidden;
+  border: 1px solid black;
+  
+  .container {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    [data-typing]{
+      position: absolute;
+      top: 0;
+      transform-origin: 0% 0%;
+      margin: 0;
+      padding: 0;
+      top: 100px;
+      line-height: 1;
+      color: #333;
+    }
+    [data-typing="from"]{
+      top: 0;
+      left: 80px;
+      font-size: 50px;
+      height: 70px;
+      line-height: 70px;
+    }
+    [data-typing="flight"]{
+      top: 50px;
+      left: 25px;
+      font-size: 20px;
+      height: 70px;
+      line-height: 50px;
+    }
+    [data-typing="to"]{
+      top: 55px;
+      left: 230px;
+      font-size: 30px;
+      color: rgb(240, 236, 236);
+      text-shadow: 1px 2px 4px rgb(143, 141, 141);
+      
+    }
+    [data-typing="full-stack"]{
+      top: 90px;
+      left: 130px;
+      font-size: 35px;
+      letter-spacing: 1px;
+    }
+    [data-typing="developer"]{
+      top: 130px;
+      left: 210px;
+      font-size: 25px;
+      letter-spacing: 2px;
+    }
+    [data-typing="who"]{
+      top: 95px;
+      left: 420px;
+      font-size: 36px;
+      transform: rotate(90deg);
+      background: #333;
+      color: white;
+      padding: 0px 4px;
+    }
+    [data-typing="love"]{
+      top: 160px;
+      left: 220px;
+      font-size: 36px;
+    }
+    [data-typing="learn"]{
+      top: 200px;
+      left: 70px;
+      font-size: 36px;
+      text-shadow: 3px 6px 8px rgb(247, 223, 180);
+    }
+    [data-typing="create"]{
+      top: 200px;
+      left: 200px;
+      font-size: 36px;
+      text-shadow: 1px 4px 6px rgb(247, 223, 180);
+    }
+    [data-typing="with"]{
+      top: 245px;
+      left: 90px;
+      font-size: 36px;
+      color: wheat;
+      text-shadow: 1px 2px 4px rgb(155, 135, 97);
+    }
+    [data-typing="javascript"]{
+      top: 250px;
+      left: 230px;
+      font-size: 36px;
+      transform: rotate(90deg);
+    }
+    [data-typing="nodejs"]{
+      top: 290px;
+      left: 100px;
+      font-size: 20px;
+    }
+    [data-typing="react"]{
+      top: 320px;
+      left: 90px;
+      font-size: 30px;
+    }
+    [data-typing="html"]{
+      top: 360px;
+      left: 110px;
+      font-size: 28px;
+    }
+    [data-typing="css"]{
+      top: 400px;
+      left: 108px;
+      font-size: 40px;
+    }
+  }
+  
+}
 
+@media screen and (max-width: 600px) {
+  .wrapper {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}

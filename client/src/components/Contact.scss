@@ -22,7 +22,7 @@
   .contact-form {
     display: flex;
     flex-direction: column;
-    padding: 0rem 20%;
+    padding: 0rem 35%;
     .form-input {
       background-color: transparent;
       height: 4em;
@@ -41,7 +41,7 @@
       }
     }
     @include media('<=tablet') {
-      // padding: 0 8rem;
+      padding: 0 10%;
     }
     @include media('<=phone') {
       // padding: 0 2rem;

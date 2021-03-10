@@ -1,6 +1,10 @@
 import './About.scss';
+import gsap from 'gsap';
 // import { Animated } from "react-animated-css";
 // import Modal from './Modal'
+
+let tl = gsap.timeline()
+tl.fromTo('[data-typing="developer"]', { color:"black"}, { color: "blue" , duration: 3 });
 
 
 export default function About(props) {
@@ -25,19 +29,38 @@ export default function About(props) {
 
   return (
     <div id="about" className="about">
-        <span>From flight attendant to web developer&nbsp;</span><br></br>
+        {/* <span>From flight attendant to web developer&nbsp;</span><br></br>
         <span>Just Graduated the <a className="a-link" href="https://www.lighthouselabs.ca" target="_blank">Lighthouse Labs</a><br></br> web developement bootcamp</span>
         <br></br><span>Other Studies in Fashion marketing, <br></br> Business & Kinesiology</span><br></br>
         <br></br><span className="uppercase bolder justify">Love learning &</span><span className="uppercase">&nbsp;want to learn more</span>
         <br></br><span className="uppercase bolder justify">Love creating &</span><span className="uppercase">&nbsp;want to create more</span>
         <br></br><span className="uppercase bolder justify">Love working&nbsp; &</span><span className="uppercase">&nbsp;want to work more</span><span></span><br></br>
         <span>ATM Working on an e-commerce and an outdoor company website</span>
-        <br></br><span className="uppercase">Let's connect </span>
+        <br></br><span className="uppercase">Let's connect </span> */}
         {/* <span>{content.text1}<a className="ref" href="https://www.lighthouselabs.ca/" target="_blank">Lighthouse Labs</a>{content.text2} 
         <Modal 
           language={props.language}
         /> */}
         {/* </p> */}
+        <div className="wrapper">
+          <div className="container">
+            <p data-typing="from">From</p>
+            <p data-typing="flight">flight attendant</p>
+            <p data-typing="to">to</p>
+            <a href="https://github.com/raphpaquet" data-typing="full-stack">full-stack</a>
+            <a href="https://github.com/raphpaquet" data-typing="developer">Developer</a>
+            <p data-typing="who">who</p>
+            <p data-typing="love">Love to</p>
+            <p data-typing="learn">learn</p>
+            <p data-typing="create">& create</p>
+            <p data-typing="with">with</p>
+            <p data-typing="javascript">Javascript</p>
+            <p data-typing="css">CSS</p>
+            <p data-typing="nodejs">Node.js</p>
+            <p data-typing="react">React</p>
+            <p data-typing="html">HTML</p>
+          </div>
+        </div>
     </div>
   )
 }
