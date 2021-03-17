@@ -84,7 +84,7 @@ function App() {
         <main>
           <section className="landing">
             <nav>
-              <h1 id="logo">raphpaquet</h1>
+              <h1 className="logo-raph">raphpaquet</h1>
               <ul className="nav-links">
                 <TabsMenu 
                 language={language}
@@ -98,12 +98,12 @@ function App() {
             <div id="nav-small-screen">
               <BurgerBtn />
             </div>
+                <h2 className="big-text">Junior Web Developer</h2>
             <div className="presentation">
               <div className="presentation-text">
-                <h2 className="big-text">Junior Web Developer</h2>
-                <button onClick={openAbout}>
+                {/* <button onClick={openAbout}>
                 <Button />
-                </button>
+                </button> */}
               </div>
               <div className="about-text hidden">
                 <About />

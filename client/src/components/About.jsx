@@ -29,19 +29,6 @@ export default function About(props) {
 
   return (
     <div id="about" className="about">
-        {/* <span>From flight attendant to web developer&nbsp;</span><br></br>
-        <span>Just Graduated the <a className="a-link" href="https://www.lighthouselabs.ca" target="_blank">Lighthouse Labs</a><br></br> web developement bootcamp</span>
-        <br></br><span>Other Studies in Fashion marketing, <br></br> Business & Kinesiology</span><br></br>
-        <br></br><span className="uppercase bolder justify">Love learning &</span><span className="uppercase">&nbsp;want to learn more</span>
-        <br></br><span className="uppercase bolder justify">Love creating &</span><span className="uppercase">&nbsp;want to create more</span>
-        <br></br><span className="uppercase bolder justify">Love working&nbsp; &</span><span className="uppercase">&nbsp;want to work more</span><span></span><br></br>
-        <span>ATM Working on an e-commerce and an outdoor company website</span>
-        <br></br><span className="uppercase">Let's connect </span> */}
-        {/* <span>{content.text1}<a className="ref" href="https://www.lighthouselabs.ca/" target="_blank">Lighthouse Labs</a>{content.text2} 
-        <Modal 
-          language={props.language}
-        /> */}
-        {/* </p> */}
         <div className="wrapper">
           <div className="container">
             <p data-typing="from">From</p>

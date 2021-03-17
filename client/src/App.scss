@@ -14,7 +14,7 @@
     width: 110%;
   }
   @include media('<=phone') {
-    // background: green;
+    min-height: 110vh;
     overflow: hidden;
     height: 100vh;
   }
@@ -47,6 +47,11 @@
           visibility: hidden;
           position: fixed;
         }
+        .logo-raph {
+          font-family: $font-text;
+          font-weight: lighter;
+          font-size: 2rem;
+        }
         .nav-links {
           display: flex;
           list-style: none;
@@ -58,11 +63,6 @@
             font-size: 1rem;
             letter-spacing: 0.2em;
           }
-        }
-        #logo {
-          font-family: $font-title;
-          font-weight: lighter;
-          font-size: 2rem;
         }
       }
       #nav-small-screen {
@@ -127,6 +127,8 @@
           }
           @include media('<=phone') {
             width: 15rem;
+            margin-top: 1rem;
+            margin-left: 7rem;
           }
         }
         .icon-interest {
@@ -201,27 +203,25 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
           }
-          .big-text {
-            // position: relative;
-            text-align: center;
-            font-size: 2rem;
-            font-family: $font-text;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            font-weight: 100;
-            margin-top: 10rem;
-            color: white;
-            width: fit-content;
-            @include media('<=tablet') {
-              margin-top: 0rem;
-            }
-            @include media('<=phone') {
-              font-size: 1rem;
-              margin-top: 2rem;
-            }
-          }
         }
-    }
+      }
+      .big-text {
+        text-align: center;
+        font-size: 2rem;
+        font-family: $font-text;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 100;
+        margin-top: 5rem;
+        color: white;
+        @include media('<=tablet') {
+          margin-top: 0rem;
+        }
+        @include media('<=phone') {
+          font-size: 1rem;
+          margin-top: 2rem;
+        }
+      }
   }
   
   
@@ -263,10 +263,10 @@
   }
 }
 
-.hidden {
-  visibility: hidden;
-  position: absolute;
-}
+// .hidden {
+//   visibility: hidden;
+//   position: absolute;
+// }
 
 
 @keyframes colorChange {
