@@ -116,8 +116,8 @@ export default function Contact(props) {
         <br></br>
         <TextareaAutosize aria-label="empty textarea" id="message" className="form-input msg" name="message" placeholder={content.message} value={state.message} onChange={handleChange} required/>
         <br></br>
-        <div class="box-1">
-          <button class="btn btn-one" type="submit" variant="contained" disabled={loading} >
+        <div className="box-1">
+          <button className="btn btn-one" type="submit" variant="contained" disabled={loading} >
             <span>{content.click}</span>
          </button>
          <div className="progress">

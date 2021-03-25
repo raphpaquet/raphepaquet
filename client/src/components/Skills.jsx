@@ -58,7 +58,7 @@ export default function Skills(props) {
             <FaGit className="skill-icon"  />
             <label>Git</label>
           </div>
-          <div className="skill-name" onClick={() => setProgress(80)} >
+          <div className="skill-name" onClick={() => setProgress(60)} >
             <AiOutlineConsoleSql className="skill-icon" />
             <label>SQL</label>
           </div>

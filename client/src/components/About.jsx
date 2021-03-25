@@ -1,26 +1,58 @@
 import './About.scss';
 import gsap from 'gsap';
-// import { Animated } from "react-animated-css";
-// import Modal from './Modal'
 
-let tl = gsap.timeline()
-tl.fromTo('[data-typing="developer"]', { color:"black"}, { color: "blue" , duration: 3 });
+
+
+const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+document.addEventListener("DOMContentLoaded", function(event){
+tl.fromTo(".one", {x: -200, opacity: 0}, {x: 10, opacity: 1, rotation: 360 , duration: 1});
+tl.fromTo(".two", {opacity:0, x:-300}, {x: 0, opacity:1, duration: 1});
+tl.fromTo(".three", {opacity:0, scale:0}, {opacity:1, scale:1})
+tl.fromTo(".four", {opacity: 0, scale: 0.1, color: "#fff"}, {opacity:1, scale:1, color: 'black',  duration:1})
+tl.fromTo(".five", {opacity: 0, x: -400}, {opacity:1, x: 0, duration: 1});
+tl.fromTo(".six", {opacity: 0, y: -400}, {opacity: 1, y: 0, duration: 1}); 
+tl.fromTo(".seven", {opacity: 0}, {opacity:1, scale:1, repeat: 1, repeatDelay: 0.1})
+tl.fromTo('.eight', {opacity: 0}, {opacity:1, rotation: 360})
+tl.fromTo('.nine', {opacity: 0}, {opacity:1, rotation: -360})
+tl.fromTo('.ten', {opacity: 0}, {opacity:1})
+tl.fromTo('.eleven', {opacity: 0}, {opacity:1})
+tl.fromTo('.twelve', {opacity: 0}, {opacity:1})
+tl.fromTo('.thirteen', {opacity: 0}, {opacity:1})
+tl.fromTo('.fourteen', {opacity: 0}, {opacity:1})
+tl.fromTo('.fifthteen', {opacity: 0}, {opacity:1})
+tl.to('.selfie', {filter: "grayscale(0)"})
+})
 
 
 export default function About(props) {
 
+
+
   let content = {
     english: {
-      title: "Hi, my name is Raphaëlle, nice to meet you :)",
-      about: "Little about me",
-      text1: 'I studied fashion marketing, business and kinesiology while working in the restaurant industry. I finally became a flight attendant until the pandemic had me put my wings down. Unemployed and looking for a new challenge, the excitement of learning missed me. I finally decided to plunge into coding, a project that I had postponed for a while. I decided to enroll at the ',
-      text2: " web development Bootcamp in October 2020 and went through 12 intensive weeks of coding immersion. Not only did I learn multiple skills, but mostly, I discovered a new passion for front-end development. My passion, autodidactic attitude and perseverance help me become a better coder every day.",
+      from: "From",
+      flight: "Flight Attendant",
+      to: 'to',
+      full: "Full-Stack.",
+      dev: "developer",
+      who: "who", 
+      love: "love to",
+      learn: "learn", 
+      create: "& create",
+      with: "with"
     },
     french: {
-      title: "Salut, je m'appelle Raphaëlle, enchantée :)",
-      about: "Un peu sur moi.. ",
-      text1: "J’ai étudié en commercialisation de la mode, en business ainsi qu’en kinésiologie tout en travaillant dans le milieu de la restauration. J’ai finalement poursuivi un rêve de devenir agente de bord jusqu'à ce que la pandémie m’oblige à poser mes ailes. Étant sans emploi et à la recherche de nouveaux défis, je me suis initiée au codage, projet que j’avais mis sur la glace depuis un moment. Ma curiosité et ma soif d’apprentissage, m’ont amené à m’inscrire dans un Bootcamp de développement web à ",
-      text2: " où j’y ai passé 12 semaines intensives d’immersion. Non seulement j’ai acquis de multiples compétences, mais je me suis découvert une nouvelle passion pour le développement front-end. Mon attitude autodidacte et ma persévérance m'aident à devenir une meilleure codeuse à tous les jours."
+      from: "Passée",
+      flight: "d'agent de bord",
+      to: 'à',
+      full: "Full-Stack.",
+      dev: "développeuse",
+      who: "qui", 
+      love: "aime",
+      learn: "apprendre", 
+      create: "& créer",
+      with: "avec"
     }
   }
 
@@ -31,21 +63,21 @@ export default function About(props) {
     <div id="about" className="about">
         <div className="wrapper">
           <div className="container">
-            <p data-typing="from">From</p>
-            <p data-typing="flight">flight attendant</p>
-            <p data-typing="to">to</p>
-            <a href="https://github.com/raphpaquet" data-typing="full-stack">full-stack</a>
-            <a href="https://github.com/raphpaquet" data-typing="developer">Developer</a>
-            <p data-typing="who">who</p>
-            <p data-typing="love">Love to</p>
-            <p data-typing="learn">learn</p>
-            <p data-typing="create">& create</p>
-            <p data-typing="with">with</p>
-            <p data-typing="javascript">Javascript</p>
-            <p data-typing="css">CSS</p>
-            <p data-typing="nodejs">Node.js</p>
-            <p data-typing="react">React</p>
-            <p data-typing="html">HTML</p>
+            <p data-typing="from" className="one">From</p>
+            <p data-typing="flight" className="two">flight attendant</p>
+            <p data-typing="to" className="three">to</p>
+            <a href="https://github.com/raphpaquet" data-typing="full-stack" className="four">full-stack</a>
+            <a href="https://github.com/raphpaquet" data-typing="developer" className="five">Developer</a>
+            <p data-typing="who" className="six">who</p>
+            <p data-typing="love" className="seven">Love to</p>
+            <p data-typing="learn" className="eight">learn</p>
+            <p data-typing="create" className="nine">& create</p>
+            <p data-typing="with" className="ten">with</p>
+            <p data-typing="javascript" className="eleven">Javascript</p>
+            <p data-typing="css" className="twelve">CSS</p>
+            <p data-typing="nodejs" className="thirteen">Node.js</p>
+            <p data-typing="react" className="fourteen">React</p>
+            <p data-typing="html" className="fifthteen">HTML</p>
           </div>
         </div>
     </div>

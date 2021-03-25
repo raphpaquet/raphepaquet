@@ -13,19 +13,19 @@ import Footer from './components/Footer';
 import Button from './components/Button';
 import About from './components/About';
 
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+// const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-document.addEventListener("DOMContentLoaded", function(event){
-  tl.to('.intro', {visibility: "visible"})
-  tl.to('.text', { y:'0%', duration: 1, stagger: 0.50 });
-  tl.to('.slider', { y:"-100%", duration: 1.5, delay: 0.5 });
-  tl.to('.intro', { y: "-100%", duration: 1 }, "-=1");
-  tl.fromTo('nav', { opacity:0 }, { opacity:1 , duration: 1 });
-  tl.fromTo('#nav-small-screen', { opacity:0 }, { opacity:1 , duration: 1 });
-  tl.fromTo('.big-text', { opacity:0 }, { opacity:1 , duration: 1 }, "-=1" );
-  tl.fromTo('.button', { opacity:0 }, { opacity:1 , duration: 1 }, "-=1" );
-  tl.fromTo('.selfie', { opacity:0 }, { opacity:1 , duration: 1 }, "-=0.5" );
-})
+// document.addEventListener("DOMContentLoaded", function(event){
+//   tl.to('.intro', {visibility: "visible"})
+//   tl.to('.text', { y:'0%', duration: 1, stagger: 0.50 });
+//   tl.to('.slider', { y:"-100%", duration: 1.5, delay: 0.5 });
+//   tl.to('.intro', { y: "-100%", duration: 1 }, "-=1");
+//   tl.fromTo('nav', { opacity:0 }, { opacity:1 , duration: 1 });
+//   tl.fromTo('#nav-small-screen', { opacity:0 }, { opacity:1 , duration: 1 });
+//   tl.fromTo('.big-text', { opacity:0 }, { opacity:1 , duration: 1 }, "-=1" );
+//   tl.fromTo('.button', { opacity:0 }, { opacity:1 , duration: 1 }, "-=1" );
+//   tl.fromTo('.selfie', { opacity:0 }, { opacity:1 , duration: 1 }, "-=0.5" );
+// })
 
 const history = createBrowserHistory();
 
@@ -98,7 +98,7 @@ function App() {
             <div id="nav-small-screen">
               <BurgerBtn />
             </div>
-                <h2 className="big-text">Junior Web Developer</h2>
+                {/* <h2 className="big-text">Junior Web Developer</h2> */}
             <div className="presentation">
               <div className="presentation-text">
                 {/* <button onClick={openAbout}>
