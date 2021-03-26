@@ -112,15 +112,15 @@ TEXT UNDERLINED
 }
 
 
-@media (max-width: 480px) {
-  .actions {
-    font-size: 1.3em;
-    margin-right: 1em;
-    .menu__group {
-      padding: 0.5em
-    }
-    .menu__link {
-      padding: var(--menuLinkPadding, 0.5rem 1.5rem);
-    }
-  }
-}
+// @media (max-width: 480px) {
+//   .actions {
+//     font-size: 1.3em;
+//     margin-right: 1em;
+//     .menu__group {
+//       padding: 0.5em
+//     }
+//     .menu__link {
+//       padding: var(--menuLinkPadding, 0.5rem 1.5rem);
+//     }
+//   }
+// }

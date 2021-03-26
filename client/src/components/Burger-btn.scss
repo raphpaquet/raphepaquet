@@ -2,13 +2,6 @@
 @import '../breakpoints/breakpoints.scss';
 
 #burger {
-
-  @include media('<=desktop') {
-    
-  }
-  @include media('<=phone') {
-    // padding: 0rem 1rem
-  }
   .logo-burger {
     display: flex;
     align-items: center;
@@ -24,20 +17,25 @@
         font-size: 3rem;
         margin-left: 3rem;
       }
-      // font raleway , uppercase, light
+      @include media('<=phone') {
+        font-size: 2rem;
+        margin-left: 1rem;
+      }
     }
     .burger-btn {
       background: transparent;
       border: none;
       transform: scale(2);
       color: white;
-      @include media('<=phone') {
-        margin-top: 0rem;
-      }
       @include media('<=desktop') {
         transform: scale(3);
         margin-top: 0 !important;
         margin-right: 2rem;
+      }
+      @include media('<=phone') {
+        margin-top: 0rem;
+        transform: scale(2);
+        margin-right: 0rem;
       }
     }
   }
@@ -86,7 +84,7 @@
     width: 3rem;
     @include media('<=phone') {
       width: 1rem;
-      right: 2rem;
+      right: 0.5rem;
     }
     @include media('<=desktop') {
       margin-right: 3rem;

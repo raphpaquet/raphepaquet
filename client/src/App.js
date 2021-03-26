@@ -63,9 +63,7 @@ function App(props) {
               <BurgerBtn language={language}/>
             </div>
             <div className="presentation">
-              <div className="presentation-text">
-              </div>
-              <div className="about-text hidden">
+              <div className="about-text">
                 <About language={language}/>
               </div>
               <div className="image-icon">

@@ -4,7 +4,9 @@
 html {
   min-width: 100vw;
   @include media('<=desktop') {
-    min-width: fit-content;
+  }
+  @include media('<=phone') {
+    max-height: 100%;
     overflow-x: hidden;
   }
 }
@@ -13,6 +15,10 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  @include media('<=phone') {
+    max-height: 100%;
+    overflow-x: hidden;
+  }
 }
 
 h1 {
