@@ -172,9 +172,8 @@ export default function ProjectCard(props) {
     },
   ]
 
-  props.language === "french" ? (projects = projectsFR) : (projects = projectsEN);
 
-  
+  props.language === "English" ? (projects = projectsEN) : (projects = projectsFR);
 
   return (
   <Fragment>

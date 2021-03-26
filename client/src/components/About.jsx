@@ -34,10 +34,10 @@ export default function About(props) {
       from: "From",
       flight: "Flight Attendant",
       to: 'to',
-      full: "Full-Stack.",
+      full: "Full-Stack",
       dev: "developer",
       who: "who", 
-      love: "love to",
+      love: "loves to",
       learn: "learn", 
       create: "& create",
       with: "with"
@@ -46,38 +46,38 @@ export default function About(props) {
       from: "Passée",
       flight: "d'agent de bord",
       to: 'à',
-      full: "Full-Stack.",
-      dev: "développeuse",
+      full: "full-stack",
+      dev: "developer",
       who: "qui", 
-      love: "aime",
-      learn: "apprendre", 
+      love: "🖤 apprendre",
+      learn: "", 
       create: "& créer",
       with: "avec"
     }
   }
 
-  props.language === "french" ? (content = content.french) : (content = content.english);
+  props.language === "English" ? (content = content.english) : (content = content.french);
 
 
   return (
     <div id="about" className="about">
         <div className="wrapper">
           <div className="container">
-            <p data-typing="from" className="one">From</p>
-            <p data-typing="flight" className="two">flight attendant</p>
-            <p data-typing="to" className="three">to</p>
-            <a href="https://github.com/raphpaquet" data-typing="full-stack" className="four">full-stack</a>
-            <a href="https://github.com/raphpaquet" data-typing="developer" className="five">Developer</a>
-            <p data-typing="who" className="six">who</p>
-            <p data-typing="love" className="seven">Love to</p>
-            <p data-typing="learn" className="eight">learn</p>
-            <p data-typing="create" className="nine">& create</p>
-            <p data-typing="with" className="ten">with</p>
+            <p data-typing="from" className="one">{content.from}</p>
+            <p data-typing="flight" className="two">{content.flight}</p>
+            <p data-typing="to" className="three">{content.to}</p>
+            <a href="https://github.com/raphpaquet" data-typing="full-stack" className="four">{content.full}</a>
+            <a href="https://github.com/raphpaquet" data-typing="developer" className="five">{content.dev}</a>
+            <p data-typing="who" className="six">{content.who}</p>
+            <p data-typing="love" className="seven">{content.love}</p>
+            <p data-typing="learn" className="eight">{content.learn}</p>
+            <p data-typing="create" className="nine">{content.create}</p>
+            <p data-typing="with" className="ten">{content.with}</p>
             <p data-typing="javascript" className="eleven">Javascript</p>
             <p data-typing="css" className="twelve">CSS</p>
             <p data-typing="nodejs" className="thirteen">Node.js</p>
             <p data-typing="react" className="fourteen">React</p>
-            <p data-typing="html" className="fifthteen">HTML</p>
+            <p data-typing="html" className="fifthteen">HTML </p>
           </div>
         </div>
     </div>

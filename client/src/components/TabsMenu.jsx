@@ -19,33 +19,33 @@ export default function TabsMenu(props) {
   // }
   
 
-  const [isToggled, setIsToggled] = useState(false)
-  /* SET LANGUAGE */
-  let languageStoredInLocalStorage = localStorage.getItem("language");
+  // const [isToggled, setIsToggled] = useState(false)
+  // /* SET LANGUAGE */
+  // let languageStoredInLocalStorage = localStorage.getItem("language");
 
-  let [language, setLanguage] = useState(
-    languageStoredInLocalStorage ? languageStoredInLocalStorage : "english"
-  );
+  // let [language, setLanguage] = useState(
+  //   languageStoredInLocalStorage ? languageStoredInLocalStorage : "english"
+  // );
 
-  const handleToggle = (language) => {
-    if(isToggled && language === 'english') {
-      setLanguage('french')
-    } else {
-      setLanguage('english')
-    }
-    console.log(language)
-  }
+  // const handleToggle = (language) => {
+  //   if(isToggled && language === 'english') {
+  //     setLanguage('french')
+  //   } else {
+  //     setLanguage('english')
+  //   }
+  //   console.log(language)
+  // }
 
-  function storeLanguageInLocalStorage(language) {
-    console.log('language', language)
-    if (language === "english" || '') {
-      setLanguage('french')
-    } else if (language === "french" ){
-      setLanguage('english')
-    }
-    localStorage.setItem("language", language);
-  }
-
+  // function storeLanguageInLocalStorage(language) {
+  //   console.log('language', language)
+  //   if (language === "english" || '') {
+  //     setLanguage('french')
+  //   } else if (language === "french" ){
+  //     setLanguage('english')
+  //   }
+  //   localStorage.setItem("language", language);
+  // }
+  
   let content = {
     english: {
       project: "projects",
@@ -60,8 +60,8 @@ export default function TabsMenu(props) {
       cv: "CV"
     }
   }
-
-  props.language === "french" ? (content = content.french) : (content = content.english);
+  
+  props.language === "English" ? (content = content.english) : (content = content.french);
 
 
 
@@ -70,18 +70,26 @@ export default function TabsMenu(props) {
     <div className="page">
     <nav className="page__menu menu">
       <ul className="menu__list r-list">
-        <li className="menu__group"><HashLink smooth to="#project" className="menu__link r-link text-underlined">Projects</HashLink></li>
-        <li className="menu__group"><HashLink smooth to="#skills" className="menu__link r-link text-underlined">Skills</HashLink></li>
-        <li className="menu__group"><HashLink smooth to="#contact" className="menu__link r-link text-underlined">Contact</HashLink></li>
-        <li className="menu__group"><a href="https://www.canva.com/design/DAERGl5eu-Y/qM8RzslwTKL7Mk0_lwDmYg/view" className="menu__link r-link text-underlined" target="_blank">Resume</a></li>
+        <li className="menu__group"><HashLink smooth to="#project" className="menu__link r-link text-underlined">{content.project}</HashLink></li>
+        <li className="menu__group"><HashLink smooth to="#skills" className="menu__link r-link text-underlined">{content.skill}</HashLink></li>
+        <li className="menu__group"><HashLink smooth to="#contact" className="menu__link r-link text-underlined">{content.contact}</HashLink></li>
+        <li className="menu__group"><a href="https://www.canva.com/design/DAERGl5eu-Y/qM8RzslwTKL7Mk0_lwDmYg/view" className="menu__link r-link text-underlined" target="_blank">{content.cv}</a></li>
         <li className="menu__group"><a href="https://www.linkedin.com/in/raphellepaquet/" className="menu__link r-link text-underlined" target="_blank"><LinkedInIcon /></a></li>
         <li className="language">
-          <span>En&nbsp;</span>
+        <select 
+          className="custom-select"
+          value={props.language}
+          onChange={e => props.handleSetLanguage(e.target.value)}>
+            <option value="English">En</option>
+            <option value="French">Fr</option>
+        </select>
+          {/* <span>En&nbsp;</span>
           <ToggleSwitch 
             isToggled={isToggled}
             onToggle={() => setIsToggled(false), () => handleToggle(language)}
           />
-          <span>&nbsp;Fr</span></li>
+          <span>&nbsp;Fr</span> */}
+        </li>
       </ul>
     </nav>
   </div>

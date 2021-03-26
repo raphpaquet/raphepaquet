@@ -63,7 +63,7 @@
     height: 60px;
     font-family: 'Inter';
     font-weight: 300;
-    font-size: 1.7em;
+    font-size: 1.5em;
     @include media('<=phone') {
       font-size: 0.8rem;
     }
@@ -107,7 +107,7 @@
     line-height: normal;
   }
   .card-stack {
-    font-size: 1.7em;
+    font-size: 1.5em;
     @include media('<=phone') {
       font-size: 0.7rem;
       height: fit-content;
@@ -115,7 +115,7 @@
     }
   }
   .card-work {
-    font-size: 1.7em;
+    font-size: 1.5em;
     @include media('<=phone') {
       font-size: 0.7rem;
     }

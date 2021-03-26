@@ -13,6 +13,23 @@ export default function BurgerBtn(props) {
       document.querySelector('.image-icon').classList.remove('hidden');
     };
 
+    let content = {
+      english: {
+        project: "projects",
+        skill: "skills",
+        contact: "contact",
+        cv: "resume"
+      },
+      french: {
+        project: "projets",
+        skill: "compétences",
+        contact: "contact",
+        cv: "CV"
+      }
+    }
+    
+    props.language === "English" ? (content = content.english) : (content = content.french);
+
   return (
    <div id="burger">
      <div className="logo-burger">
@@ -28,16 +45,16 @@ export default function BurgerBtn(props) {
          </button>
            <ul className="categories">
             <li>
-              <HashLink to="#project" className="category-btn" onClick={closeMenu}>Projects</HashLink>
+              <HashLink to="#project" className="category-btn" onClick={closeMenu}>{content.project}</HashLink>
             </li>
             <li>
-              <HashLink to="#skills" className="category-btn" onClick={closeMenu}>Skills</HashLink>
+              <HashLink to="#skills" className="category-btn" onClick={closeMenu}>{content.skill}</HashLink>
             </li>
             {/* <li>
               <HashLink to="#about" className="category-btn" onClick={closeMenu}>About</HashLink>
             </li> */}
             <li>
-              <HashLink to="#contact" className="category-btn" onClick={closeMenu}>Contact</HashLink>
+              <HashLink to="#contact" className="category-btn" onClick={closeMenu}>{content.contact}</HashLink>
             </li>
            </ul>
       </aside>

@@ -25,7 +25,7 @@ export default function Skills(props) {
     }
   }
 
-  props.language === "french" ? (content = content.french) : (content = content.english);
+  props.language === "English" ? (content = content.english) : (content = content.french);
 
   return (
     <div id="skills">

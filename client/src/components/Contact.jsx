@@ -99,7 +99,7 @@ export default function Contact(props) {
     }
   }
 
-  props.language === "french" ? (content = content.french) : (content = content.english);
+  props.language === "English" ? (content = content.english) : (content = content.french);
 
   return (
     <section id="contact">

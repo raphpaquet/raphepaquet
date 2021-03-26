@@ -2,10 +2,9 @@
 @import '../breakpoints/breakpoints.scss';
 
 #burger {
-  // width: 100%;
-  // padding: 0rem 2rem;
+
   @include media('<=desktop') {
-    // padding: 0rem 5rem;
+    
   }
   @include media('<=phone') {
     // padding: 0rem 1rem
@@ -21,6 +20,10 @@
       font-family: $font-text;
       font-weight: lighter;
       font-size: 2rem;
+      @include media('<=desktop') {
+        font-size: 3rem;
+        margin-left: 3rem;
+      }
       // font raleway , uppercase, light
     }
     .burger-btn {
@@ -30,6 +33,11 @@
       color: white;
       @include media('<=phone') {
         margin-top: 0rem;
+      }
+      @include media('<=desktop') {
+        transform: scale(3);
+        margin-top: 0 !important;
+        margin-right: 2rem;
       }
     }
   }
@@ -79,6 +87,10 @@
     @include media('<=phone') {
       width: 1rem;
       right: 2rem;
+    }
+    @include media('<=desktop') {
+      margin-right: 3rem;
+      font-size: 3rem;
     }
   }
   h3 {
