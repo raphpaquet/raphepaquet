@@ -78,10 +78,10 @@ export default function About(props) {
             <p data-typing="nodejs" className="thirteen">Node.js</p>
             <p data-typing="react" className="fourteen">React</p>
             <p data-typing="html" className="fifthteen">HTML </p>
-          </div>
             <div className="image-icon">
                 <img className="selfie" src="./images/selfie1.png" />
               </div>
+          </div>
         </div>
     </div>
   )

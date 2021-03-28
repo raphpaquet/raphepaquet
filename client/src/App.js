@@ -63,12 +63,7 @@ function App(props) {
               <BurgerBtn language={language}/>
             </div>
             <div className="presentation">
-              <div className="about-text">
                 <About language={language}/>
-              </div>
-              {/* <div className="image-icon">
-                <img className="selfie" src="./images/selfie1.png" />
-              </div> */}
             </div>
           </section>
         </main>
