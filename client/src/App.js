@@ -66,9 +66,9 @@ function App(props) {
               <div className="about-text">
                 <About language={language}/>
               </div>
-              <div className="image-icon">
+              {/* <div className="image-icon">
                 <img className="selfie" src="./images/selfie1.png" />
-              </div>
+              </div> */}
             </div>
           </section>
         </main>

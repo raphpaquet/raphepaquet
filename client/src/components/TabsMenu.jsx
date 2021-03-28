@@ -14,37 +14,7 @@ import ToggleSwitch from './ToggleSwitch';
 export default function TabsMenu(props) {
 
   const history = useHistory()
-  // const redirectContact = () => {
-  //     history.push('/contact')
-  // }
-  
 
-  // const [isToggled, setIsToggled] = useState(false)
-  // /* SET LANGUAGE */
-  // let languageStoredInLocalStorage = localStorage.getItem("language");
-
-  // let [language, setLanguage] = useState(
-  //   languageStoredInLocalStorage ? languageStoredInLocalStorage : "english"
-  // );
-
-  // const handleToggle = (language) => {
-  //   if(isToggled && language === 'english') {
-  //     setLanguage('french')
-  //   } else {
-  //     setLanguage('english')
-  //   }
-  //   console.log(language)
-  // }
-
-  // function storeLanguageInLocalStorage(language) {
-  //   console.log('language', language)
-  //   if (language === "english" || '') {
-  //     setLanguage('french')
-  //   } else if (language === "french" ){
-  //     setLanguage('english')
-  //   }
-  //   localStorage.setItem("language", language);
-  // }
   
   let content = {
     english: {

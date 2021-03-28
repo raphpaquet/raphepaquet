@@ -13,30 +13,12 @@
       font-family: $font-text;
       font-weight: lighter;
       font-size: 2rem;
-      @include media('<=desktop') {
-        font-size: 3rem;
-        margin-left: 3rem;
-      }
-      @include media('<=phone') {
-        font-size: 2rem;
-        margin-left: 1rem;
-      }
     }
     .burger-btn {
       background: transparent;
       border: none;
       transform: scale(2);
       color: white;
-      @include media('<=desktop') {
-        transform: scale(3);
-        margin-top: 0 !important;
-        margin-right: 2rem;
-      }
-      @include media('<=phone') {
-        margin-top: 0rem;
-        transform: scale(2);
-        margin-right: 0rem;
-      }
     }
   }
    .sidebar {
@@ -133,5 +115,22 @@
       padding: 10px
     }
   }
- }
+}
+
+@media screen and (max-width: 991px) {
+}
+
+@media screen and (max-width: 768px) {
+  #logo {
+    margin-left: 2rem;
+    font-size: 2rem;
+  }
+  .burger-btn {
+    margin-top: 0;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 500px) {
+}
 

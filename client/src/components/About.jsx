@@ -12,7 +12,7 @@ tl.fromTo(".three", {opacity:0, scale:0}, {opacity:1, scale:1})
 tl.fromTo(".four", {opacity: 0, scale: 0.1, color: "#fff"}, {opacity:1, scale:1, color: 'black',  duration:1})
 tl.fromTo(".five", {opacity: 0, x: -400}, {opacity:1, x: 0, duration: 1});
 tl.fromTo(".six", {opacity: 0, y: -400}, {opacity: 1, y: 0, duration: 1}); 
-tl.fromTo(".seven", {opacity: 0}, {opacity:1, scale:1, repeat: 1, repeatDelay: 0.1})
+tl.fromTo(".seven", {opacity: 0}, {opacity:1, scale:1, repeatDelay: 0.1})
 tl.fromTo('.eight', {opacity: 0}, {opacity:1, rotation: 360})
 tl.fromTo('.nine', {opacity: 0}, {opacity:1, rotation: -360})
 tl.fromTo('.ten', {opacity: 0}, {opacity:1})
@@ -79,6 +79,9 @@ export default function About(props) {
             <p data-typing="react" className="fourteen">React</p>
             <p data-typing="html" className="fifthteen">HTML </p>
           </div>
+            <div className="image-icon">
+                <img className="selfie" src="./images/selfie1.png" />
+              </div>
         </div>
     </div>
   )
