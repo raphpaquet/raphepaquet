@@ -6,11 +6,11 @@ export default function BurgerBtn(props) {
      // sidebar open/close
     const openMenu = () => {
       document.querySelector('.sidebar').classList.add('open');
-      document.querySelector('.image-icon').classList.add('hidden');
+      document.querySelector('.about').classList.add('hidden');
     };
     const closeMenu = () => {
       document.querySelector('.sidebar').classList.remove('open');
-      document.querySelector('.image-icon').classList.remove('hidden');
+      document.querySelector('.about').classList.remove('hidden');
     };
 
     let content = {
@@ -37,7 +37,6 @@ export default function BurgerBtn(props) {
         <button onClick={openMenu} className='burger-btn'>
           &#9776;
         </button>
-
      </div>
       <aside className="sidebar">
          <button className="sidebar-close-button" onClick={closeMenu}>
@@ -50,9 +49,6 @@ export default function BurgerBtn(props) {
             <li>
               <HashLink to="#skills" className="category-btn" onClick={closeMenu}>{content.skill}</HashLink>
             </li>
-            {/* <li>
-              <HashLink to="#about" className="category-btn" onClick={closeMenu}>About</HashLink>
-            </li> */}
             <li>
               <HashLink to="#contact" className="category-btn" onClick={closeMenu}>{content.contact}</HashLink>
             </li>

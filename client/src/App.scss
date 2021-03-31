@@ -8,69 +8,45 @@
   overflow-x: hidden;
   overflow-y: scroll;
   main {
-    font-family: $font-title;
-    #landing {
-      color: white;
-      min-height: 100vh;
-      background-size: cover;
-      background-position: center;
-      nav {
-        padding: 0rem 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 10vh;
-        padding: 0rem 3rem;
-        .logo-raph {
-          font-family: $font-text;
-          font-weight: lighter;
-          font-size: 2rem;
-        }
-        .nav-links {
-          display: flex;
-          list-style: none;
-          padding: 0;
-          li {
-            font-family: $font-text;
-            font-weight: 300;
-            padding-left: 2rem;
-            font-size: 1rem;
-            letter-spacing: 0.2em;
-          }
-        }
+    color: white;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    nav {
+      padding: 0rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 10vh;
+      padding: 0rem 3rem;
+      .logo-raph {
+        font-family: $font-text;
+        font-weight: lighter;
+        font-size: 2rem;
       }
-      #nav-small-screen {
-        width: 100%;
-        visibility: hidden;
-        position: fixed;
+      .nav-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        li {
+          font-family: $font-text;
+          font-weight: 300;
+          padding-left: 2rem;
+          font-size: 1rem;
+          letter-spacing: 0.2em;
+        }
       }
     }
-
-    .presentation {
-      display: flex;
-      justify-content: space-evenly;
-      padding: 0 10%;
-      .image-icon {
-        .selfie {
-          margin-top: 20rem;
-          height: 55vh;
-          margin-right: 2rem;
-          filter: grayscale(1);
-          width: auto;
-          &:hover {
-            filter: drop-shadow(2px 4px 6px black);
-          }
-        }
-      }
-
-        .presentation-text {
-          align-items: center;
-          display: flex;
-          flex-direction: column;
-        }
-      }
+    #nav-small-screen {
+      // width: 100%;
+      visibility: hidden;
+      position: fixed;
     }
   }
+}
+  
 
 @keyframes colorChange {
   from { filter: opacity(0);}
@@ -101,13 +77,12 @@
       visibility: hidden;
       position: fixed;
     }
-    #landing {
-
       #nav-small-screen {
         visibility: visible !important;
-        position: unset !important;
+        position: relative !important;
+        margin: 1rem 0.5rem;
       }
-    }
+    
   }
 }
 

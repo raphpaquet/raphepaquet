@@ -40,12 +40,6 @@
         overflow: visible;
       }
     }
-    @include media('<=tablet') {
-      padding: 0 10%;
-    }
-    @include media('<=phone') {
-      // padding: 0 2rem;
-    }
   }
 }
 

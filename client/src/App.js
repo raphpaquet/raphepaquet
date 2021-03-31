@@ -23,22 +23,8 @@ function App(props) {
   function storeLanguageInLocalStorage(language) {
     localStorage.setItem("language", language);
   }
-  console.log(language)
 
-  let content = {
-    english: {
-      name: "Hey, I'm Raphaëlle !",
-      tech: "Newbie in the tech world",
-      about: "More About Me"
-    },
-    french: {
-      name: "Hey, moi c'est Raphaëlle !",
-      tech: "Novice de l'industrie de la technologie",
-      about: "En savoir plus sur moi"
-    }
-  }
-
-  props.language === "English" ? (content = content.English) : (content = content.French);
+  
 
   return (
     <Router history={history}>
@@ -46,7 +32,6 @@ function App(props) {
       <Route path="/" exact>
       <div className="App">
         <main>
-          <section id="landing">
             <nav>
               <h1 className="logo-raph">raphpaquet</h1>
               <ul className="nav-links">
@@ -62,10 +47,7 @@ function App(props) {
             <div id="nav-small-screen">
               <BurgerBtn language={language}/>
             </div>
-            <div className="presentation">
-                <About language={language}/>
-            </div>
-          </section>
+              <About language={language}/>
         </main>
       </div>
       <Projects language={language}/>
