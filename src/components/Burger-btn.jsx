@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "./Burger-btn.scss";
 
@@ -66,6 +67,16 @@ export default function BurgerBtn(props) {
             >
               {content.contact}
             </HashLink>
+          </li>
+          <li>
+            <a
+              href="https://www.canva.com/design/DAERGl5eu-Y/qM8RzslwTKL7Mk0_lwDmYg/view"
+              className="category-btn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {content.cv}
+            </a>
           </li>
         </ul>
       </aside>

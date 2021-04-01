@@ -24,7 +24,7 @@ export default function Footer() {
       </div>
       <div className="made-of">Made with 🖤, React, HTML & SASS</div>
       <div className="rights">
-        @ 2021 Raphaëlle Paquet | All Rights Reserved.
+        @2021 RaphaëllePaquet | All Rights Reserved.
       </div>
     </footer>
   );
