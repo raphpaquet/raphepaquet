@@ -1,0 +1,118 @@
+@import "../assets/variables";
+
+#project .MuiCard-root {
+  max-width: 345px;
+  margin-bottom: 2em;
+}
+
+.media {
+  height: 0;
+  padding-top: 56.25%;
+}
+
+.card-header span {
+  font-family: $font-text !important;
+  font-weight: bold;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-stack {
+  height: 200px;
+}
+.typo-title {
+  font-family: $font-text;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.typo-type {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.typo-text {
+  font-family: $font-text;
+  color: #929090;
+  font-weight: 300;
+}
+
+.MuiCardContent-root {
+  margin-bottom: 1rem;
+  p {
+    height: 60px;
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 1.5em;
+  }
+}
+
+.card-header {
+  .MuiCardHeader-content span {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+}
+
+.MuiCardActions-root {
+  padding: 15px;
+  color: black;
+}
+.MuiIconButton-label {
+  transform: scale(1.5);
+  a {
+    color: #4e4e4e;
+  }
+}
+.MuiIconButton-root {
+  transform: scale(0.8);
+}
+.card-content {
+  font-family: $font-text;
+  .card-stack {
+    font-size: 1.5em;
+  }
+  .card-work {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .media {
+    max-width: 100%;
+  }
+  .typo-type {
+    font-size: 0.6rem;
+  }
+  .MuiCardContent-root {
+    p {
+      font-size: 0.8rem;
+    }
+  }
+  .card-header {
+    .MuiCardHeader-content span {
+      font-size: 1rem;
+    }
+  }
+  .MuiIconButton-label {
+    transform: scale(1);
+  }
+  .card-content {
+    line-height: normal;
+    .card-stack {
+      font-size: 0.7rem;
+      height: fit-content;
+      margin-bottom: 1rem;
+    }
+    .card-work {
+      font-size: 0.7rem;
+    }
+  }
+}

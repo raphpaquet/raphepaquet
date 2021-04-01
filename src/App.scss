@@ -1,0 +1,86 @@
+@import './assets/variables';
+
+.App {
+  background-color: #dac29b;
+  min-width: 100%;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  main {
+    color: white;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    nav {
+      padding: 0rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 10vh;
+      padding: 0rem 3rem;
+      .logo-raph {
+        font-family: $font-text;
+        font-weight: lighter;
+        font-size: 2rem;
+      }
+      .nav-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        li {
+          font-family: $font-text;
+          font-weight: 300;
+          padding-left: 2rem;
+          font-size: 1rem;
+          letter-spacing: 0.2em;
+        }
+      }
+    }
+    #nav-small-screen {
+      // width: 100%;
+      visibility: hidden;
+      position: fixed;
+    }
+  }
+}
+  
+
+@keyframes colorChange {
+  from { filter: opacity(0);}
+  to {filter: none}
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    bottom: -100%
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  main{
+    nav {
+      visibility: hidden;
+      position: fixed;
+    }
+      #nav-small-screen {
+        visibility: visible !important;
+        position: relative !important;
+        margin: 1rem 0.5rem;
+      }
+    
+  }
+}
