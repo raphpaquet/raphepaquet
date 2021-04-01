@@ -41,8 +41,8 @@ export default function About(props) {
       with: "with"
     },
     french: {
-      from: "Passée",
-      flight: "d'agent de bord",
+      from: "",
+      flight: "d'agente de bord",
       to: 'à',
       full: "full-stack",
       dev: "developer",
