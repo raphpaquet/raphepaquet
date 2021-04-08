@@ -62,7 +62,7 @@ export default function ProjectCard(props) {
       techStack_f: "ReactJS, Redux, CSS, Axios",
       techStack_b: "Node.JS, Express, PayPal Api, MongoDB, deploy on Heroku",
       personnalWork:
-        "From A to Z, but following a E-commerce course to learn Redux.",
+        "From A to Z, but following an E-commerce course to learn Redux.",
       image: "/images/screenShotShop.png",
       github: "https://github.com/raphpaquet/shop-petitsfruits",
     },
@@ -89,7 +89,7 @@ export default function ProjectCard(props) {
       techStack_b: "Node.JS, Express, Google Maps JS API, Stripe API, SQL",
       personnalWork:
         "Lot of front-end work with React and Material-UI, Google Map API/geolocation, Stripe implementation",
-      image: "/images/freshbsqt.gif",
+      image: "/images/freshbsqt.png",
       github: "https://github.com/raphpaquet/FreshBsQt",
     },
     {
@@ -149,11 +149,11 @@ export default function ProjectCard(props) {
     {
       _id: "1",
       name: "Petitsfruits E-commerce",
-      date: "April, 2021",
+      date: "Avril, 2021",
       shortDesc:
         "[En développement] Boutique en ligne pour une artiste locale basée à Montréal",
       techStack_f: "ReactJS, Redux, CSS, Axios",
-      techStack_b: "Node.JS, Express, PayPal Api, MongoDB, deploy on Heroku",
+      techStack_b: "Node.JS, Express, PayPal Api, MongoDB, deployé sur Heroku",
       personnalWork:
         "From A to Z, en suivant un cours de Redux E-commerce.",
       image: "/images/screenShotShop.png",
@@ -162,11 +162,11 @@ export default function ProjectCard(props) {
     {
       _id: "2",
       name: "Site web static de compagnie ",
-      date: "March, 2021",
+      date: "Mars, 2021",
       shortDesc:
         "Site web informatif pour une compagnie de canot camping.",
       techStack_f: "ReactJS, SASS, Material-UI",
-      techStack_b: "Node.JS, Express, Google Maps JS API",
+      techStack_b: "Node.JS, Express, Google Maps JS API, deployé sur FireBase",
       personnalWork:
         "From A to Z. Apprentissage des principes de SEO et quelques principes de UI/UX pour le design.",
       image: "images/screenShotActivities.png",
@@ -182,7 +182,7 @@ export default function ProjectCard(props) {
       techStack_b: "Node.JS, Express, Google Maps JS API, Stripe API, SQL",
       personnalWork:
         "Beaucoup de travail front-end avec React et Material-UI, implémentation des API Google Map/geolocation et Stripe.",
-      image: "/images/freshbsqt.gif",
+      image: "/images/freshbsqt.png",
       github: "https://github.com/raphpaquet/FreshBsQt",
     },
     {
