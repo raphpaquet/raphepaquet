@@ -157,7 +157,7 @@ export default function ProjectCard(props) {
         "Node.JS, Express, PostgreSQL [testing: Storybook, @testing-library/react-hooks, Jest, Cypress]",
       personnalWork:
         "Premier projet avec React, création de composants avec StoryBook, beaucoup de tests.",
-      image: "/images/SchedulerREC.gif",
+      image: "/images/scheduler.png",
       github: "https://github.com/raphpaquet/scheduler",
     },
     {

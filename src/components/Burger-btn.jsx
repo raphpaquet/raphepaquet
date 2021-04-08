@@ -78,6 +78,17 @@ export default function BurgerBtn(props) {
               {content.cv}
             </a>
           </li>
+          <li className="language">
+            <select
+              className="category-btn"
+              style={{marginTop:'1rem'}}
+              value={props.language}
+              onChange={(e) => props.handleSetLanguage(e.target.value)}
+            >
+              <option value="English">En</option>
+              <option value="French">Fr</option>
+            </select>
+          </li>
         </ul>
       </aside>
     </div>
