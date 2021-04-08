@@ -55,6 +55,32 @@ export default function ProjectCard(props) {
   const projectsEN = [
     {
       _id: "1",
+      name: "Petitsfruits E-commerce",
+      date: "April, 2021",
+      shortDesc:
+        "[Still In Developement] E-commerce for a local artist based in Montreal",
+      techStack_f: "ReactJS, Redux, CSS, Axios",
+      techStack_b: "Node.JS, Express, PayPal Api, MongoDB, deploy on Heroku",
+      personnalWork:
+        "From A to Z, but following a E-commerce course to learn Redux.",
+      image: "/images/screenShotShop.png",
+      github: "https://github.com/raphpaquet/shop-petitsfruits",
+    },
+    {
+      _id: "2",
+      name: "Company Static website",
+      date: "March, 2021",
+      shortDesc:
+        "Static website to present a canoe-camping company",
+      techStack_f: "ReactJS, SASS, Material-UI",
+      techStack_b: "Node.JS, Express, Google Maps JS API",
+      personnalWork:
+        "From A to Z. Learning about SEO, UI/UX basics to design the app.",
+      image: "/images/screenShotActivities.png",
+      github: "https://github.com/raphpaquet/aventure-rs",
+    },
+    {
+      _id: "3",
       name: "FreshBsQt",
       date: "January, 2021",
       shortDesc:
@@ -67,7 +93,7 @@ export default function ProjectCard(props) {
       github: "https://github.com/raphpaquet/FreshBsQt",
     },
     {
-      _id: "2",
+      _id: "4",
       name: "Jungle-Rails",
       date: "January, 2021",
       shortDesc:
@@ -80,7 +106,7 @@ export default function ProjectCard(props) {
       github: "https://github.com/raphpaquet/jungle-rails",
     },
     {
-      _id: "3",
+      _id: "5",
       name: "Scheduler",
       date: "December, 2020",
       shortDesc:
@@ -90,11 +116,11 @@ export default function ProjectCard(props) {
         "Node.JS, Express, PostgreSQL [testing: Storybook, @testing-library/react-hooks, Jest, Cypress]",
       personnalWork:
         "First project using React, creating components using Storybook, lot of testing",
-      image: "/images/SchedulerREC.gif",
+      image: "/images/scheduler.png",
       github: "https://github.com/raphpaquet/scheduler",
     },
     {
-      _id: "4",
+      _id: "6",
       name: "Burgers-R-Us",
       date: "November, 2020",
       shortDesc:
@@ -106,7 +132,7 @@ export default function ProjectCard(props) {
       github: "https://github.com/raphpaquet/burgers-r-us",
     },
     {
-      _id: "5",
+      _id: "7",
       name: "Tweeter",
       date: "November 2020",
       shortDesc:
@@ -122,6 +148,32 @@ export default function ProjectCard(props) {
   const projectsFR = [
     {
       _id: "1",
+      name: "Petitsfruits E-commerce",
+      date: "April, 2021",
+      shortDesc:
+        "[En développement] Boutique en ligne pour une artiste locale basée à Montréal",
+      techStack_f: "ReactJS, Redux, CSS, Axios",
+      techStack_b: "Node.JS, Express, PayPal Api, MongoDB, deploy on Heroku",
+      personnalWork:
+        "From A to Z, en suivant un cours de Redux E-commerce.",
+      image: "/images/screenShotShop.png",
+      github: "https://github.com/raphpaquet/shop-petitsfruits",
+    },
+    {
+      _id: "2",
+      name: "Site web static de compagnie ",
+      date: "March, 2021",
+      shortDesc:
+        "Site web informatif pour une compagnie de canot camping.",
+      techStack_f: "ReactJS, SASS, Material-UI",
+      techStack_b: "Node.JS, Express, Google Maps JS API",
+      personnalWork:
+        "From A to Z. Apprentissage des principes de SEO et quelques principes de UI/UX pour le design.",
+      image: "images/screenShotActivities.png",
+      github: "https://github.com/raphpaquet/aventure-rs",
+    },
+    {
+      _id: "3",
       name: "FreshBsQt",
       date: "Janvier, 2021",
       shortDesc:
@@ -134,7 +186,7 @@ export default function ProjectCard(props) {
       github: "https://github.com/raphpaquet/FreshBsQt",
     },
     {
-      _id: "2",
+      _id: "4",
       name: "Jungle-Rails",
       date: "Janvier, 2021",
       shortDesc:
@@ -147,7 +199,7 @@ export default function ProjectCard(props) {
       github: "https://github.com/raphpaquet/jungle-rails",
     },
     {
-      _id: "3",
+      _id: "5",
       name: "Scheduler",
       date: "Décembre, 2020",
       shortDesc:
@@ -161,7 +213,7 @@ export default function ProjectCard(props) {
       github: "https://github.com/raphpaquet/scheduler",
     },
     {
-      _id: "4",
+      _id: "6",
       name: "Burgers-R-Us",
       date: "Novembre, 2020",
       shortDesc:
@@ -173,7 +225,7 @@ export default function ProjectCard(props) {
       github: "https://github.com/raphpaquet/burgers-r-us",
     },
     {
-      _id: "5",
+      _id: "7",
       name: "Tweeter",
       date: "Novembre 2020",
       shortDesc: "Application monopage reproduisant le modèle de Twitter.",

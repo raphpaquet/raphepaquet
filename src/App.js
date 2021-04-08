@@ -42,7 +42,7 @@ function App(props) {
                 </ul>
               </nav>
               <div id="nav-small-screen">
-                <BurgerBtn language={language}
+                <BurgerBtn 
                  language={language}
                  handleSetLanguage={(language) => {
                    setLanguage(language);
