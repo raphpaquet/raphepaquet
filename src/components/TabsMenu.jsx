@@ -1,11 +1,9 @@
 import "./TabsMenu.scss";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import { BrowserRouter as Router, useHistory } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 
 export default function TabsMenu(props) {
-  const history = useHistory();
 
   let content = {
     english: {
